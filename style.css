@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*@media screen and (max-width: 600px) {
+    *{
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+    }
+  }
+*/
+body {
+    background-image: url('./images/titlescreen.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.title-screen{
+    width: 100%;
+    height:640px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title-screen-container {
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    height: 100%;
+    width: 100%;
+}
+
+.character-selection-container {
+    display: none;
+}
+
+
+.game-title-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.game-title img{
+    height:150px;
+    width:500px;
+}
+.char-game-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.char-game-title img{
+    height:110px;
+    width:350px;
+}
+.start-button {
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    padding:8px 40px 8px 40px;
+    border: none;
+    background-color: rgb(255,255,255, 0.3);
+    border-radius: 5px;
+    color: #C61E1E;
+}
+
+.start-button-container{
+    display: flex;
+    justify-content: center;
+}
+.char-selection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+}
+.character-selection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding:50px
+}
+
+.open-character-selection {
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(0%);
+    z-index: 99;
+}
+
+.character-selection-container {
+    display: none;
+}
+
+.credits {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.credits p{
+    color:white;
+    font-family: 'Cinzel', serif;
+}
+
+.tab-content-container {
+    text-align: center;
+}
+.cancel-container{
+    text-align: center;
+}
+
+.tab-content-container {
+    background-color: rgb(0,0,0,0.5);
+    height:380px;
+    width:300px;
+    padding:10px;
+    margin-bottom:10px;
+}
+.tab-content-container h3 {
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size:15px;
+}
+
+.create-char-dialog {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(0,0,0,0.5);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.dialog-content{
+    background-color: white;
+    color: black;
+    font-family: 'Cinzel', serif;
+    border-radius: 20px;
+    text-align: center;
+    padding:20px;
+}
+.closedialog {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.confirm-button-container {
+    margin-top: 20px;
+}
+
+.yes, .no {
+    margin: 0 10px;
+}
+
+
+.play-game{
+    margin-top: 20px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap:30px;
+    align-items: center;
+}
+.play-game-title img{
+    height:120px;
+    width: 350px;
+}
+#player-character-container {
+    color:white;
+    font-family: 'Cinzel', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0,0,0,0.5);
+    width: 250px;
+    height:300px;
+    
+}
+#player-character-img {
+    text-align: center;
+    align-items: center;
+    height: 130px;
+    width:90px;
+}
+#player-character-container h5{
+    color:white;
+    font-family: 'Cinzel', serif;
+    font-size:20px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="animation.css"/>   
+    <link rel="stylesheet" href="charTabs.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="title-screen-container">
+
+        <div class="dialog">
+            <div class="title-screen">
+                <div class="game-title-container">
+                    <div class="game-title">
+                        <img src="./images/gamelogo.png"/>
+                    </div>
+                </div>
+                <div class="start-button-container">
+                    <button class="start-button" id="start-button"><span>Start</span></button>
+                </div>
+                <div class="spacer"></div>
+                
+            </div>
+        </div>
+
+        <div class="dialog" id="char-selection">
+            <div class="open-character-selection" id="character-selection-container">
+
+                <div class="character-selection">
+                    <div class="char-game-title">
+                        <img src="./images/gamelogo.png"/>
+                    </div>
+                    <div class="tab-content-container">
+                        <h3>Choose Character</h3>
+
+                        <div class="tab">
+                            <button class="tablinks" onclick="openTab(event, 'knight')">Knight</button>
+                            <button class="tablinks" onclick="openTab(event, 'Mage')">Mage</button>
+                            <button class="tablinks" onclick="openTab(event, 'samuraiArcher')">Samurai</button>
+                        </div>
+
+                        <div id="knight" class="tabcontent">
+                            <div class="char-knight-container  char-div">
+                                <img class="char-knight spritesheet-container" src="characterSprites/knight/Knight_3/Run.png" alt="Knight"/>
+                            </div>
+                            <h5>Knight</h5>
+                            <p><span>Stats</span></p>
+                            <p>Attack: 30</p>
+                            <p>Dexterity:10</p>
+                            <p>Magic: 0</p>
+                            <p>Strength: 30</p>
+                            <p>HP: 100</p>
+                            <br>
+                            <input type="text" class="player-name" id="create-name-knight" name="player-name" placeholder="Enter Your Name">
+                            <br>
+                            <button id="create-knight" class="create-character-button">Create Character</button>
+                        </div>
+                        <div id="Mage" class="tabcontent">
+                            <div class="char-wizard-container  char-div">
+                                <img class="char-wizard spritesheet-container" src="characterSprites/wizard/Wanderer Magican/Idle.png" alt="Wizard"/>
+                            </div>
+                            <h5>Mage</h5>
+                            <p><span>Stats</span></p>
+                            <p>Attack: 10</p>
+                            <p>Dexterity: 10</p>
+                            <p>Magic: 30</p>
+                            <p>Strength: 10</p>
+                            <p>HP: 100</p>
+                            <br>
+                            <input type="text" class="player-name" id="create-name-wizard" name="player-name" placeholder="Enter Your Name" required>
+                            <br>
+                            <button  id="create-wizard" class="create-character-button">Create Character</button>
+                        </div>
+                        <div id="samuraiArcher" class="tabcontent">
+                            <div class="char-samurai-container char-div">
+                                <img class="char-samurai spritesheet-container" src="characterSprites/New folder/Samurai/Run.png" alt="Samurai Archer"/>
+                            </div>
+                            <h5>Samurai</h5>
+                            <p><span>Stats</span></p>
+                            <p>Attack: 20</p>
+                            <p>Dexterity: 30</p>
+                            <p>Magic: 0</p>
+                            <p>Strength: 20</p>
+                            <p>HP: 100</p>
+                            <br>
+                            <input type="text" class="player-name" id="create-name-samurai" name="player-name-" placeholder="Enter Your Name">
+                            <br>
+                            <button id="create-samurai" class="create-character-button">Create Character</button>
+                        </div>
+    
+                    </div>
+                    <div class="cancel-container">
+                        <button id="cancel">Back to Title Screen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="create-char-dialog" id="confirm-create-character-dialog">
+            <div class="col">
+                
+            </div>
+            <div class="col">
+                <div class="dialog-content">
+                    <div class="dialog-content">
+                        <h4>Do you wish to create the character?</h4>
+                        <div class="confirm-button-container">
+                            <button id="yes" class="yes">YES</button>
+                            <button id="no" class="no">NO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="create-char-dialog" id="Enter-Name">
+            <div class="col">
+            </div>
+            <div class="col">
+                <div class="dialog-content">
+                    <div class="dialog-content">
+                        <h4>Please Enter Name</h4>
+                        <div class="confirm-button-container">
+                            <button id="no-name" class="no-name">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="create-char-dialog" id="Sucess">
+            <div class="col">
+            </div>
+            <div class="col">
+                <div class="dialog-content">
+                    <div class="dialog-content">
+                        <h4>Character Succesfully Created</h4>
+                        <div class="confirm-button-container">
+                            <button id="sucess" class="sucess">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="play-game">
+                <div class="play-game-title-container">
+                    <div class="play-game-title">
+                        <img src="./images/gamelogo.png"/>
+                    </div>
+                </div>
+                <div id="player-character-container">
+                    <div id="name-tag"></div>
+                    <div id="player-name-container"></div>
+                    <div id="player-character-img"></div>
+                    <div id="player-type-container"></div>
+                </div>
+                <div class="start-button-container">
+                    <button class="start-button" id="start-button"><span>Enter Game</span></button>
+                </div>
+                <div class="spacer"></div>
+                
+            </div>
+        <div class="credits">
+            <p>Made By:<br><span>Nathaniel Lucero</span></p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="script.js"></script>
+        <script src="charTabs.js"></script>
+        <script src="builder.js"></script>
+        <script src="character-selection.js"></script>
+        <script src="character-creation-dialog.js"></script> 
+        <script type="module" src="create-character.js"></script>
+        <script type="module" src="character.screen.js"></script>
+    </div>
+    
+    
+</body>
+</html>

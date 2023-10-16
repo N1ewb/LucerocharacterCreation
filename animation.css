@@ -1,0 +1,102 @@
+#samuraiArcher{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.char-wizard-container {
+    height: 150x;
+    width:100px;
+    overflow: hidden;
+}
+.char-wizard-container img {
+    height: 130px;
+    width:auto;
+}
+
+#Mage{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.char-samurai-container {
+    height: 150x;
+    width:110px;
+    overflow: hidden;
+}
+.char-samurai-container img {
+    height: 130px;
+    width:auto;
+}
+
+#knight{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.char-knight-container {
+    height: 150x;
+    width:110px;
+    overflow: hidden;
+}
+.char-knight-container img {
+    height: 130px;
+    width:auto;
+}
+
+
+.char-samurai {
+    animation: moveSamurai 1s steps(8) infinite;
+}
+
+@keyframes moveSamurai{
+    from {
+       transform: translate3d(0px,0,0)
+    }
+    to {
+       transform: translate3d(-100%,0,0)
+    }
+ }
+
+ .char-wizard {
+    animation: moveWizard 1s steps(8) infinite;
+}
+
+@keyframes moveWizard{
+    from {
+       transform: translate3d(0px,0,0)
+    }
+    to {
+       transform: translate3d(-100%,0,0)
+    }
+ }
+
+ .char-wizard {
+    animation: moveWizard 1s steps(8) infinite;
+}
+
+@keyframes moveKnight{
+    from {
+       transform: translate3d(0px,0,0)
+    }
+    to {
+       transform: translate3d(-100%,0,0)
+    }
+ }
+ .char-knight {
+    animation: moveKnight 1s steps(7) infinite;
+}
+
+.start-button:hover{
+    animation: bounce 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    25% {transform: translateY(2px);}
+    30% {transform: translateY(2px);}
+    100% { transform: translateY(0); }
+  }

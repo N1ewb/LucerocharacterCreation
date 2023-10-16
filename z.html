@@ -1,0 +1,45 @@
+<div class="main">
+    <div>
+      <button id="open" onclick="openModal">Open Modal</button>
+    </div>
+</div>
+  <div class="container" id="a">
+    
+  </div>
+  <div class="modal" id="b">
+    <div class="header">
+      <a href="#" class="cancel">X</a>
+    </div>
+    <div class="content">
+      <form>
+        <label id="first_label">Username</label>
+        <input type="text" placeholder="Introduce tu username"/>
+        <label id="second_label">Password</label>
+        <input type="password" placeholder="Introduce tu password"/>
+      </form>
+    </div>
+    <div class="footer">
+      <button id="login">Iniciar Sesión</button>
+      <button class="cancel">Cancelar</button>
+    </div>
+  </div>
+  <script>
+    var modal = document.getElementById("confirm-create-character-dialog");
+var btn = document.querySelector(".create-character-button");
+var span = document.querySelector(".closedialog");
+
+btn.onclick = function() {
+    modal.style.display = "flex";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+  </script>
